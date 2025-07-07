@@ -44,7 +44,7 @@
 
   <build>
     <plugins>
-      <!-- Compiler plugin with Java 17 support -->
+      <!-- Compiler plugin configuration -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -55,7 +55,7 @@
           <release>${maven.compiler.release}</release>
         </configuration>
       </plugin>
-      
+
       <!-- JAR Plugin to specify the main class -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -68,6 +68,29 @@
             </manifest>
           </archive>
         </configuration>
+      </plugin>
+
+      <!-- SHADE Plugin to create an executable fat JAR -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.4.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>com.shanInfotech.DoctorListMapApp.App</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
