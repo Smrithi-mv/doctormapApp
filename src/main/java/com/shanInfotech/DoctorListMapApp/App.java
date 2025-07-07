@@ -13,9 +13,9 @@ public class App {
     	DoctorDao dd=new DoctorDao();
     	dd.addDoctor();
     	dd.getDoctors();
-    	dd.sortByDoctorName();
-    	dd.sortByHospital();
-    	dd.sortBySpecialisation();
+    	//dd.sortByDoctorName();
+    	//dd.sortByHospital();
+    	//dd.sortBySpecialisation();
     	
     	
     }
