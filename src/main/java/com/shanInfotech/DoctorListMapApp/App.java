@@ -11,7 +11,7 @@ public class App {
     public static void main(String[] args) throws SpecialisationCheckException, MissingFieldException {
        // System.out.println("Hello World!");
     	DoctorDao dd=new DoctorDao();
-    	dd.addDoctor();
+    	//dd.addDoctor();
     	dd.getDoctors();
     	//dd.sortByDoctorName();
     	//dd.sortByHospital();
