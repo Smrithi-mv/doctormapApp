@@ -53,7 +53,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shanInfotech.DoctorListMapApp.App;</mainClass>
+                            <mainClass>com.shanInfotech.DoctorListMapApp.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
