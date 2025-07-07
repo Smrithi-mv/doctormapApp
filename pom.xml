@@ -42,7 +42,6 @@
     </dependency>
   </dependencies>
 
-  
 <build>
 		
 			<plugins>
@@ -54,7 +53,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shanInfotech.vehicleServiceApp.VSMainApp</mainClass>
+                            <mainClass>com.shanInfotech.DoctorListMapApp;</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
